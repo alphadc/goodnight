@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find_by_id(params[:id])
+		@timers = @user.all_timers
 	end
 
 	def follow
